@@ -1,4 +1,5 @@
 import re
+import traceback
 class CamadaEnlace:
     ignore_checksum = False
 
@@ -97,7 +98,6 @@ class Enlace:
                     try:
                         self.callback(d_enviar[:-1])
                     except:
-                        import traceback
                         traceback.print_exc()
                 
                 d_enviar = b""
