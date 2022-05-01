@@ -43,8 +43,8 @@ class CamadaEnlace:
 class Enlace:
     def __init__(self, linha_serial):
         self.linha_serial = linha_serial
-        self.resid= b''
         self.linha_serial.registrar_recebedor(self.__raw_recv)
+        self.resid= b''
 
     def registrar_recebedor(self, callback):
         self.callback = callback
